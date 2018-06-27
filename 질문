@@ -1,0 +1,16 @@
+def harvesting():
+    move()
+    pick_beeper()
+
+def turning6():
+    repeat(harvesting,6)
+    turn_left()
+
+turning6()
+
+def turningN(i):
+    repeat(harvesting,i)
+    turn_left()
+
+for i in range(5, 0, -1):
+    repeat(turningN(i),2)
