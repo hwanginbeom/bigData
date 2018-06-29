@@ -207,7 +207,9 @@ public class Step10MyArt {
 	}
 
 	public static void main(String[] args) {
+		System.out.println("마름모를 찍어봅시다. ㅎㅎ");
 		rhombus();
+		System.out.println("수업 시간과 복습한 시간에 따른 연봉");
 		System.out.println(studytime(400,200));
 		System.out.println(studytime(350,100));
 		System.out.println(studytime(290,100));
