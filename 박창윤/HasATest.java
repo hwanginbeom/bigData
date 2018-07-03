@@ -15,12 +15,16 @@ public class HasATest {
 	public static void main(String[] args) {
 		Person p1 = new Person();
 		Person p2 = new Person();
+		
 		Car c = p1.myCar;
 		Engine e = c.engine;
+		
 		e.EngineName="고강도 파워 엔진";
 		e.cc=200;
+		
 		p1.name="김정은";
-		p2.name="김일성";
+		p2.name="트럼프";
+		
 		System.out.println(p1.getName());
 		System.out.println(p2.getName());
 		System.out.println(p1.myCar.engine.getEngineName());
