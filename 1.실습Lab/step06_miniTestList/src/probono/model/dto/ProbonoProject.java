@@ -1,19 +1,27 @@
-//실제 진행되는 재능 기부 프로젝트 정보 보유 클랫
-/* 기부자, 수혜자, 기부 종류, 기부되는 실제 내용 */
 package probono.model.dto;
 
 public class ProbonoProject {
+	
+	//재능 기부 프로젝트 이름 : 오드리햅번 프로젝트? 슈바이처 프로젝트등?
+	private String probonoProjectName;
+	
+	//재능 기부 설명 : 재능 기부 종류에 대한 설명 정보 
+	private Probono probono;
 
-	private String probonoProjectName;//현 프로젝트 이름
-	private Probono probono;//기부 종류
-	private Activist activist; //기부자
-	private Recipient receive;//수혜자
-	private String projectContent;//기부되는 실제 내용
+	//기부자 정보
+	private Activist activist; 
+
+	//수혜자 정보
+	private Recipient receive;
+	
+	//실제 진행되는 재능 기부 분야의 내용
+	private String projectContent;
 
 	public ProbonoProject() {
 		super();
 	}
 
+	/*ProbonoProject("오드리햅버 프로젝트", audreyHepbun, audrey, receive, "헤어미용분야");  */
 	public ProbonoProject(String probonoProjectName, Probono probono,
 			Activist activist, Recipient receive, String projectContent) {
 		super();

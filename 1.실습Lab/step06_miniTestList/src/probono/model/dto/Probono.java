@@ -1,10 +1,9 @@
-//순수 재능 기부에 대한 정보 보유 클랫
 package probono.model.dto;
 
 public class Probono {
-	private String probonoId;//재능 기부 id
-	private String probonoName;//재능 기부 이름
-	private String probonoPurpose;//재능 기부 목적
+	private String probonoId;
+	private String probonoName;
+	private String probonoPurpose;
 	
 	public Probono() {}
 		
