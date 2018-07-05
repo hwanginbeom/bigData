@@ -26,13 +26,44 @@ package step01;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class KeyboardInput {
-	//step02 : 키보드 -> data.txt 파일로 출력
+	//step03 - file로 부터 read해서 출력
 	public static void main(String[] args) {
+		//read 객체
+		BufferedReader in = null;
+		//data.txt 파일에 2byte로 출력
+		BufferedWriter out = null; 
+		try {
+			in = new BufferedReader(new FileReader("data.txt"));
+			out = new BufferedWriter(new FileWriter("newData.txt"));
+			String data = in.readLine();
+			while( data != null ) {
+				out.write(data);
+				out.newLine();
+				System.out.println(data);
+				data = in.readLine();
+				out.flush();//데이터 손실을 위해서 목적지에 데이터 출력 보장
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				in.close();//사용했던 시스템 자원을 반환하기
+				out.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+	
+	//step02 : 키보드 -> data.txt 파일로 출력
+	/*public static void main(String[] args) {
 		//read 객체
 		BufferedReader in 
 		= new BufferedReader(new InputStreamReader(System.in));
@@ -60,7 +91,7 @@ public class KeyboardInput {
 				e.printStackTrace();
 			}
 		}
-	}
+	}*/
 	
 	
 	//step01 : 키보드 -> 콘솔창에 출력
