@@ -1,19 +1,27 @@
-//ì‹¤ì œ ì§„í–‰ë˜ëŠ” ì¬ëŠ¥ ê¸°ë¶€ í”„ë¡œì íŠ¸ ì •ë³´ ë³´ìœ  í´ë«
-/* ê¸°ë¶€ì, ìˆ˜í˜œì, ê¸°ë¶€ ì¢…ë¥˜, ê¸°ë¶€ë˜ëŠ” ì‹¤ì œ ë‚´ìš© */
 package probono.model.dto;
 
 public class ProbonoProject {
+	
+	//Àç´É ±âºÎ ÇÁ·ÎÁ§Æ® ÀÌ¸§ : ¿Àµå¸®Çİ¹ø ÇÁ·ÎÁ§Æ®? ½´¹ÙÀÌÃ³ ÇÁ·ÎÁ§Æ®µî?
+	private String probonoProjectName;
+	
+	//Àç´É ±âºÎ ¼³¸í : Àç´É ±âºÎ Á¾·ù¿¡ ´ëÇÑ ¼³¸í Á¤º¸ 
+	private Probono probono;
 
-	private String probonoProjectName;//í˜„ í”„ë¡œì íŠ¸ ì´ë¦„
-	private Probono probono;//ê¸°ë¶€ ì¢…ë¥˜
-	private Activist activist; //ê¸°ë¶€ì
-	private Recipient receive;//ìˆ˜í˜œì
-	private String projectContent;//ê¸°ë¶€ë˜ëŠ” ì‹¤ì œ ë‚´ìš©
+	//±âºÎÀÚ Á¤º¸
+	private Activist activist; 
+
+	//¼öÇıÀÚ Á¤º¸
+	private Recipient receive;
+	
+	//½ÇÁ¦ ÁøÇàµÇ´Â Àç´É ±âºÎ ºĞ¾ßÀÇ ³»¿ë
+	private String projectContent;
 
 	public ProbonoProject() {
 		super();
 	}
 
+	/*ProbonoProject("¿Àµå¸®Çİ¹ö ÇÁ·ÎÁ§Æ®", audreyHepbun, audrey, receive, "Çì¾î¹Ì¿ëºĞ¾ß");  */
 	public ProbonoProject(String probonoProjectName, Probono probono,
 			Activist activist, Recipient receive, String projectContent) {
 		super();
@@ -67,15 +75,15 @@ public class ProbonoProject {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("1. í”„ë¡œì íŠ¸ëª… : ");
+		builder.append("1. ÇÁ·ÎÁ§Æ®¸í : ");
 		builder.append(probonoProjectName);
-		builder.append("\n2. ì¬ëŠ¥ê¸°ë¶€ë‚´ìš© : ");
+		builder.append("\n2. Àç´É±âºÎ³»¿ë : ");
 		builder.append(probono);
-		builder.append("\n3. ì¬ëŠ¥ ê¸°ë¶€ì ì •ë³´: ");
+		builder.append("\n3. Àç´É ±âºÎÀÚ Á¤º¸: ");
 		builder.append(activist);
-		builder.append("\n4. ìˆ˜í˜œì ì •ë³´: ");
+		builder.append("\n4. ¼öÇıÀÚ Á¤º¸: ");
 		builder.append(receive);
-		builder.append("\n5. í”„ë¡œì íŠ¸ì œê³µë‚´ìš© : ");
+		builder.append("\n5. ÇÁ·ÎÁ§Æ®Á¦°ø³»¿ë : ");
 		builder.append(projectContent);
 		return builder.toString(); 
 	}

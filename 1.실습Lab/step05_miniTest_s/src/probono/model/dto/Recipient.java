@@ -23,7 +23,7 @@ public class Recipient extends People {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append(super.toString());
-		builder.append(", Á¦°ø¹Ş´Â ´ë»óÀÚ°¡ Á¦°ø¹Ş´Â ¼­ºñ½º : ");
+		builder.append(", ì œê³µë°›ëŠ” ëŒ€ìƒìê°€ ì œê³µë°›ëŠ” ì„œë¹„ìŠ¤ : ");
 		builder.append(receiveContent);
 		builder.append("]");
 		return builder.toString();

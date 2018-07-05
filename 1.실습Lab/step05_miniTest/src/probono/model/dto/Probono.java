@@ -41,11 +41,11 @@ public class Probono {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("[ÇÁ·Îº¸³ë ¾ÆÀÌµğ : ");
+		builder.append("[í”„ë¡œë³´ë…¸ ì•„ì´ë”” : ");
 		builder.append(probonoId);
-		builder.append(", ÇÁ·Îº¸³ë ÀÌ¸§ : ");
+		builder.append(", í”„ë¡œë³´ë…¸ ì´ë¦„ : ");
 		builder.append(probonoName);
-		builder.append(", ÇÁ·Îº¸³ë ¸ñÀû : ");
+		builder.append(", í”„ë¡œë³´ë…¸ ëª©ì  : ");
 		builder.append(probonoPurpose);
 		builder.append("]");
 		return builder.toString();

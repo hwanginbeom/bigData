@@ -6,17 +6,17 @@ import probono.model.dto.ProbonoProject;
 
 public class RunningEndView {
 	
-	//М┼╧Л═∙ М■└К║°Л═²М┼╦ Л╤°К═╔ 
+	//ф╞а╓ га╥на╖ф╝ цБ╥б 
 	public static void projectView(ProbonoProject project){
 		System.out.println(project);		
 	}
 	
-	//К╙╗К⌠═ М■└К║°Л═²М┼╦ Л╤°К═╔
+	//╦П╣Г га╥на╖ф╝ цБ╥б
 	public static void projectListView(ArrayList<ProbonoProject> allProbonoProject){
 		int count = allProbonoProject.size();
 		for (int index = 0; index < count; index++) {	
 			if(allProbonoProject.get(index) != null){
-				System.out.println("[М■└К║°Л═²М┼╦ " + (index+1) + "]\n" + allProbonoProject.get(index));
+				System.out.println("[га╥на╖ф╝ " + (index+1) + "]\n" + allProbonoProject.get(index));
 			}
 		}
 	}

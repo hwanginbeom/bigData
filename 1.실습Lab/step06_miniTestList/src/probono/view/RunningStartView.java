@@ -12,41 +12,41 @@ public class RunningStartView {
 	
 	public static void main(String[] args) {
 		
-		//±âºÎÀÚ
-		Activist audrey = new Activist("giver", "¿Àµå¸®", "pw1", "¹Ì¿ë");
-		//¼öÇıÀÚ
-		Recipient receive = new Recipient("receivePeople", "³ª¹®È­", "pw2", "¹«»óÄÆÆÃÈñ¸Á");
-		//Àç´É ±âºÎ ³»¿ë
+		//ê¸°ë¶€ì
+		Activist audrey = new Activist("giver", "ì˜¤ë“œë¦¬", "pw1", "ë¯¸ìš©");
+		//ìˆ˜í˜œì
+		Recipient receive = new Recipient("receivePeople", "ë‚˜ë¬¸í™”", "pw2", "ë¬´ìƒì»·íŒ…í¬ë§");
+		//ì¬ëŠ¥ ê¸°ë¶€ ë‚´ìš©
 		Probono audreyHepbun 
-		= new Probono("audreyHepbun", "¿Àµå·¹Çİ¹ø ÇÁ·ÎÁ§Æ®", "¿¹¼ú°¡, ¹®È­°ü·Ã ÇÁ·Î±×·¥ Á¦°ø, Àü½Ã¤ı°ü¶÷ µî ±âÈ¸Á¦°ø, ¹Ì¿ë,È¯°æ Ä·ÆäÀÎ µî ¹®È­¤ı¿¹¼ú°ü·Ã ºĞ¾ß");
-		//Àç´É ±âºÎ ÇÁ·ÎÁ§Æ®
+		= new Probono("audreyHepbun", "ì˜¤ë“œë ˆí–…ë²ˆ í”„ë¡œì íŠ¸", "ì˜ˆìˆ ê°€, ë¬¸í™”ê´€ë ¨ í”„ë¡œê·¸ë¨ ì œê³µ, ì „ì‹œã†ê´€ëŒ ë“± ê¸°íšŒì œê³µ, ë¯¸ìš©,í™˜ê²½ ìº í˜ì¸ ë“± ë¬¸í™”ã†ì˜ˆìˆ ê´€ë ¨ ë¶„ì•¼");
+		//ì¬ëŠ¥ ê¸°ë¶€ í”„ë¡œì íŠ¸
 		ProbonoProject audreyHepbunPorject 
-		= new ProbonoProject("¿Àµå¸®Çİ¹ö ÇÁ·ÎÁ§Æ®", 
+		= new ProbonoProject("ì˜¤ë“œë¦¬í–…ë²„ í”„ë¡œì íŠ¸", 
 											audreyHepbun, audrey, receive, 
-											"Çì¾î¹Ì¿ëºĞ¾ß");
+											"í—¤ì–´ë¯¸ìš©ë¶„ì•¼");
 			
 		
 		ProbonoProjectService service = ProbonoProjectService.getInstance();
 		
-		System.out.println("***** Project »ı¼º ÈÄ ¸ğµç Project °Ë»ö *****");
+		System.out.println("***** Project ìƒì„± í›„ ëª¨ë“  Project ê²€ìƒ‰ *****");
 		service.projectInsert(audreyHepbunPorject);
 		ArrayList<ProbonoProject> allProbonoProject = service.getAllProjects();		
 		RunningEndView.projectListView(allProbonoProject);	
 	
 		
-		System.out.println("\n***** ±âºÎÀÚ ¼öÁ¤ ÈÄ ÇØ´ç Project °Ë»ö *****");
-		//»õ·Î¿î ±âºÎÀÚ·Î ÇØ´ç project º¯°æ
-		Activist newAudrey = new Activist("newGiver", "³ª¹Ì¿ë", "newPw3", "¹«»óÆÄ¸¶Áö¿ø");
-		service.projectUpdate("¿Àµå¸®Çİ¹ö ÇÁ·ÎÁ§Æ®", newAudrey);		
-		ProbonoProject project = service.getProbonoProject("¿Àµå¸®Çİ¹ö ÇÁ·ÎÁ§Æ®");
+		System.out.println("\n***** ê¸°ë¶€ì ìˆ˜ì • í›„ í•´ë‹¹ Project ê²€ìƒ‰ *****");
+		//ìƒˆë¡œìš´ ê¸°ë¶€ìë¡œ í•´ë‹¹ project ë³€ê²½
+		Activist newAudrey = new Activist("newGiver", "ë‚˜ë¯¸ìš©", "newPw3", "ë¬´ìƒíŒŒë§ˆì§€ì›");
+		service.projectUpdate("ì˜¤ë“œë¦¬í–…ë²„ í”„ë¡œì íŠ¸", newAudrey);		
+		ProbonoProject project = service.getProbonoProject("ì˜¤ë“œë¦¬í–…ë²„ í”„ë¡œì íŠ¸");
 		RunningEndView.projectView(project);
 		
 
-		System.out.println("\n***** ¼öÇıÀÚ ¼öÁ¤ ÈÄ ÇØ´ç Project °Ë»ö *****");
-		//»õ·Î¿î ¼öÇıÀÚ·Î ÇØ´ç Project º¯°æ
-		Recipient newReceive = new Recipient("newReceivePeople", "³ªÇÊ¿ä", "newPw4", "¹«»óÆÄ¸¶Áö¿ø¹Ş±æ¿øÇÔ");
-		service.projectUpdate("¿Àµå¸®Çİ¹ö ÇÁ·ÎÁ§Æ®", newReceive);		
-		ProbonoProject project2 = service.getProbonoProject("¿Àµå¸®Çİ¹ö ÇÁ·ÎÁ§Æ®");
+		System.out.println("\n***** ìˆ˜í˜œì ìˆ˜ì • í›„ í•´ë‹¹ Project ê²€ìƒ‰ *****");
+		//ìƒˆë¡œìš´ ìˆ˜í˜œìë¡œ í•´ë‹¹ Project ë³€ê²½
+		Recipient newReceive = new Recipient("newReceivePeople", "ë‚˜í•„ìš”", "newPw4", "ë¬´ìƒíŒŒë§ˆì§€ì›ë°›ê¸¸ì›í•¨");
+		service.projectUpdate("ì˜¤ë“œë¦¬í–…ë²„ í”„ë¡œì íŠ¸", newReceive);		
+		ProbonoProject project2 = service.getProbonoProject("ì˜¤ë“œë¦¬í–…ë²„ í”„ë¡œì íŠ¸");
 		RunningEndView.projectView(project2);
 		
 	}

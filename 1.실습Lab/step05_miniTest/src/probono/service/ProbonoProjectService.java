@@ -1,16 +1,16 @@
-/* 1. ¼­¹ö ³»ºÎ¿¡ ÀÌ °´Ã¼ ¼ö¸¦ ÇÏ³ª¸¸ Àý´ëÀûÀ¸·Î º¸ÀåÇÏ´Â ±¸Á¶
+/* 1. ì„œë²„ ë‚´ë¶€ì— ì´ ê°ì²´ ìˆ˜ë¥¼ í•˜ë‚˜ë§Œ ì ˆëŒ€ì ìœ¼ë¡œ ë³´ìž¥í•˜ëŠ” êµ¬ì¡°
  * 2. Singleton Design Pattern
- * 		1. °´Ã¼ ¼ö´Â ¹«Á¶°Ç ÇÏ³ª
- * 		2. °³¹ß ±¸Á¶
- * 			1. »ý¼ºÀÚ´Â ¿ÜºÎ Å¬·¡½º¿¡°Ô Àº´Ð
- * 				- private »ý¼ºÀÚ([..]){[..]}
- * 			2. µ¿ÀÏÇÑ Å¬·¡½º ³»¿¡¼­ »ý¼ºÀÚ È£Ãâ
- * 				- °´Ã¼ »ý¼º
- * 			3. »ý¼ºµÈ °´Ã¼¸¦ ¿ÜºÎ Å¬·¡½º¿¡¼­ »ç¿ëÇÏ°Ô ÇÏ·Á¸é?
- * 				- »ý¼ºµÈ °´Ã¼ÀÇ ÁÖ¼Ò°ª ¹ÝÈ¯
- * 				-  ÀÌ ±â´ÉÀÇ ¸Þ¼Òµå´Â public
- * 				- ÀÌ ¸Þ¼Òµå È£Ãâ ½ÃÁ¡Àº ¿ÜºÎ Å¬·¡½º¿¡¼­ 
- * 				  °´Ã¼ »ý¼º¾øÀÌ È£Ãâ µû¶ó¼­ ¸Þ¼Òµå static
+ * 		1. ê°ì²´ ìˆ˜ëŠ” ë¬´ì¡°ê±´ í•˜ë‚˜
+ * 		2. ê°œë°œ êµ¬ì¡°
+ * 			1. ìƒì„±ìžëŠ” ì™¸ë¶€ í´ëž˜ìŠ¤ì—ê²Œ ì€ë‹‰
+ * 				- private ìƒì„±ìž([..]){[..]}
+ * 			2. ë™ì¼í•œ í´ëž˜ìŠ¤ ë‚´ì—ì„œ ìƒì„±ìž í˜¸ì¶œ
+ * 				- ê°ì²´ ìƒì„±
+ * 			3. ìƒì„±ëœ ê°ì²´ë¥¼ ì™¸ë¶€ í´ëž˜ìŠ¤ì—ì„œ ì‚¬ìš©í•˜ê²Œ í•˜ë ¤ë©´?
+ * 				- ìƒì„±ëœ ê°ì²´ì˜ ì£¼ì†Œê°’ ë°˜í™˜
+ * 				-  ì´ ê¸°ëŠ¥ì˜ ë©”ì†Œë“œëŠ” public
+ * 				- ì´ ë©”ì†Œë“œ í˜¸ì¶œ ì‹œì ì€ ì™¸ë¶€ í´ëž˜ìŠ¤ì—ì„œ 
+ * 				  ê°ì²´ ìƒì„±ì—†ì´ í˜¸ì¶œ ë”°ë¼ì„œ ë©”ì†Œë“œ static
  */
 package probono.service;
 
@@ -33,15 +33,15 @@ public class ProbonoProjectService {
 		return instance;
 	}
 	
-	//¸ðµç Project ¹ÝÈ¯
+	//ëª¨ë“  Project ë°˜í™˜
 	public ProbonoProject[] getAllProjects() {
 		return projectList;
 	}
 
-	//Project °Ë»ö
-	/* ÇØ´ç ÇÁ·ÎÁ§Æ®°¡ ¾ø´Â °æ¿ì Àß¸øµÈ µ¥ÀÌÅÍ ¿äÃ»ÀÔ´Ï´Ù µîÀÇ ¿¹¿Ü ¹ß»ý?
-	 * projectList[i] ¹è¿­¿¡ µ¥ÀÌÅÍ°¡ ÀÖ´Ù´Â °¡Á¤ÇÏ¿¡ ¸Þ¼Òµå È£Ãâ
-	 * ÀÌ °æ¿ì ¹è¿­¿¡ nullÀÌ ÀÖ´Ù¸é  */
+	//Project ê²€ìƒ‰
+	/* í•´ë‹¹ í”„ë¡œì íŠ¸ê°€ ì—†ëŠ” ê²½ìš° ìž˜ëª»ëœ ë°ì´í„° ìš”ì²­ìž…ë‹ˆë‹¤ ë“±ì˜ ì˜ˆì™¸ ë°œìƒ?
+	 * projectList[i] ë°°ì—´ì— ë°ì´í„°ê°€ ìžˆë‹¤ëŠ” ê°€ì •í•˜ì— ë©”ì†Œë“œ í˜¸ì¶œ
+	 * ì´ ê²½ìš° ë°°ì—´ì— nullì´ ìžˆë‹¤ë©´  */
 	public ProbonoProject getProbonoProject(String projectName) {
 		ProbonoProject project = null;
 		for (int i = 0; i < index; i++) {
@@ -53,19 +53,19 @@ public class ProbonoProjectService {
 		return project;
 	}
 
-	//Project Ãß°¡
+	//Project ì¶”ê°€
 	public void projectInsert(ProbonoProject project) {
 		projectList[index++] = project;
 	}
 	
 	
-	//??? ´ÙÇü¼º Àû¿ë ¸Þ¼Òµå·Î È®ÀåÇÏ±â
-	//instanceof - °´Ã¼ Å¸ÀÔ ºñ±³ ¿¬»êÀÚ È°¿ë
-	//Project ¼öÁ¤ - ÇÁ·ÎÁ§Æ® ¸íÀ¸·Î Àç´É ±âºÎÀÚ ¼öÁ¤ 
-	//service.projectUpdate("¿Àµå¸®ÇÝ¹ö ÇÁ·ÎÁ§Æ®", newAudrey);	
-	//service.projectUpdate("¿Àµå¸®ÇÝ¹ö ÇÁ·ÎÁ§Æ®", newReceive);	
+	//??? ë‹¤í˜•ì„± ì ìš© ë©”ì†Œë“œë¡œ í™•ìž¥í•˜ê¸°
+	//instanceof - ê°ì²´ íƒ€ìž… ë¹„êµ ì—°ì‚°ìž í™œìš©
+	//Project ìˆ˜ì • - í”„ë¡œì íŠ¸ ëª…ìœ¼ë¡œ ìž¬ëŠ¥ ê¸°ë¶€ìž ìˆ˜ì • 
+	//service.projectUpdate("ì˜¤ë“œë¦¬í–…ë²„ í”„ë¡œì íŠ¸", newAudrey);	
+	//service.projectUpdate("ì˜¤ë“œë¦¬í–…ë²„ í”„ë¡œì íŠ¸", newReceive);	
 	
-	/* ¿¹ : service.projectUpdate("½´¹ÙÀÌÃ³ ÇÁ·ÎÁ§Æ®", newReceive);  */
+	/* ì˜ˆ : service.projectUpdate("ìŠˆë°”ì´ì²˜ í”„ë¡œì íŠ¸", newReceive);  */
 	public void projectUpdate(String projectName, People people){
 		
 		ProbonoProject project = null;		
@@ -74,10 +74,10 @@ public class ProbonoProjectService {
 			if (projectList[i].getProbonoProjectName().equals(projectName)) {
 				project = projectList[i];
 				
-				if(people instanceof Activist){		//±âºÎÀÚ
-					project.setActivist( (Activist)people );//±âºÎÀÚ Á¤º¸ ¼öÁ¤ ¸Þ¼Òµå
+				if(people instanceof Activist){		//ê¸°ë¶€ìž
+					project.setActivist( (Activist)people );//ê¸°ë¶€ìž ì •ë³´ ìˆ˜ì • ë©”ì†Œë“œ
 				}else if(people instanceof Recipient){
-					project.setReceive( (Recipient)people);//¼öÇýÀÚ Á¤º¸ ¼öÁ¤ ¸Þ¼Òµå 
+					project.setReceive( (Recipient)people);//ìˆ˜í˜œìž ì •ë³´ ìˆ˜ì • ë©”ì†Œë“œ 
 				}
 				
 				break;
@@ -85,7 +85,7 @@ public class ProbonoProjectService {
 		}
 	}
 	
-	 //Project »èÁ¦ - ÇÁ·ÎÁ§Æ®¸íÀ¸·Î ÇØ´ç ÇÁ·ÎÁ§Æ® »èÁ¦
+	 //Project ì‚­ì œ - í”„ë¡œì íŠ¸ëª…ìœ¼ë¡œ í•´ë‹¹ í”„ë¡œì íŠ¸ ì‚­ì œ
 	public void projectDelete(String projectName) {
 		for (int i = 0; i < index; i++) {
 			if (projectList[i].getProbonoProjectName().equals(projectName)) {
@@ -95,7 +95,7 @@ public class ProbonoProjectService {
 		}
 	}
 	
-	//Project °³¼ö
+	//Project ê°œìˆ˜
 	public int projectListSize(){
 		return index;
 	}

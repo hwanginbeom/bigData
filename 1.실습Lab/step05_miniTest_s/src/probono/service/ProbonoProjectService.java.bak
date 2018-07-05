@@ -18,12 +18,12 @@ public class ProbonoProjectService {
 		return instance;
 	}
 	
-	//ëª¨ë“  Project ë°˜í™˜
+	//¸ðµç Project ¹ÝÈ¯
 	public ProbonoProject[] getAllProjects() {
 		return projectList;
 	}
 
-	//Project ê²€ìƒ‰
+	//Project °Ë»ö
 	public ProbonoProject getProbonoProject(String projectName) {
 		ProbonoProject project = null;
 		for (int i = 0; i < index; i++) {
@@ -35,22 +35,22 @@ public class ProbonoProjectService {
 		return project;
 	}
 
-	//Project ì¶”ê°€
+	//Project Ãß°¡
 	public void projectInsert(ProbonoProject project) {
 		projectList[index++] = project;
 	}
 	
 	
-	//??? ë‹¤í˜•ì„± ì ìš© ë©”ì†Œë“œë¡œ í™•ìž¥í•˜ê¸°
-	//instanceof - ê°ì²´ íƒ€ìž… ë¹„êµ ì—°ì‚°ìž í™œìš©
-	//Project ìˆ˜ì • - í”„ë¡œì íŠ¸ ëª…ìœ¼ë¡œ ìž¬ëŠ¥ ê¸°ë¶€ìž ìˆ˜ì • 
+	//??? ´ÙÇü¼º Àû¿ë ¸Þ¼Òµå·Î È®ÀåÇÏ±â
+	//instanceof - °´Ã¼ Å¸ÀÔ ºñ±³ ¿¬»êÀÚ È°¿ë
+	//Project ¼öÁ¤ - ÇÁ·ÎÁ§Æ® ¸íÀ¸·Î Àç´É ±âºÎÀÚ ¼öÁ¤ 
 	public void projectUpdate(String projectName, People people){
 		
 	}
 	
 	
 	
-	 //Project ì‚­ì œ - í”„ë¡œì íŠ¸ëª…ìœ¼ë¡œ í•´ë‹¹ í”„ë¡œì íŠ¸ ì‚­ì œ
+	 //Project »èÁ¦ - ÇÁ·ÎÁ§Æ®¸íÀ¸·Î ÇØ´ç ÇÁ·ÎÁ§Æ® »èÁ¦
 	public void projectDelete(String projectName) {
 		for (int i = 0; i < index; i++) {
 			if (projectList[i].getProbonoProjectName().equals(projectName)) {
@@ -60,7 +60,7 @@ public class ProbonoProjectService {
 		}
 	}
 	
-	//Project ê°œìˆ˜
+	//Project °³¼ö
 	public int projectListSize(){
 		return index;
 	}

@@ -25,7 +25,7 @@ public class Activist extends People{
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append(super.toString());
-		builder.append(", Àç´É ±âºÎ ºÐ¾ß : ");
+		builder.append(", ìž¬ëŠ¥ ê¸°ë¶€ ë¶„ì•¼ : ");
 		builder.append(major);		
 		builder.append("]");
 		return builder.toString();

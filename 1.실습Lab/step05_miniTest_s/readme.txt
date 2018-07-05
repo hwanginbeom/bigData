@@ -1,18 +1,18 @@
-[1] ½Ç½À ¸ñÀû
-	1. »ó¼Ó, ´ÙÇü¼º Àû¿ëÇØ º¸±â
-	2. µ¿ÀÏÇÑ ÁÖÁ¦ÀÇ ¼Ò½º È®ÀåÇÏ±â
+[1] ì‹¤ìŠµ ëª©ì 
+	1. ìƒì†, ë‹¤í˜•ì„± ì ìš©í•´ ë³´ê¸°
+	2. ë™ì¼í•œ ì£¼ì œì˜ ì†ŒìŠ¤ í™•ìž¥í•˜ê¸°
 	
-[2] ½Ç½À ¹æ¹ý - Á¦°øµÈ ¼Ò½º È®ÀåÇÏ±â
-	1. »õ·Ó°Ô »ý¼ºµÇ´Â ¼Ò½º
+[2] ì‹¤ìŠµ ë°©ë²• - ì œê³µëœ ì†ŒìŠ¤ í™•ìž¥í•˜ê¸°
+	1. ìƒˆë¡­ê²Œ ìƒì„±ë˜ëŠ” ì†ŒìŠ¤
 		People.java
 		
-	2. ¼öÁ¤¼Ò½º
+	2. ìˆ˜ì •ì†ŒìŠ¤
 		a. Activist.java
 		b. Recipient.java
-			- People »ó¼Ó
-			- a + b : ÀÌÅ¬¸³½º·Î ÀÚµ¿ ¿Ï¼ºÇÏ±â 
+			- People ìƒì†
+			- a + b : ì´í´ë¦½ìŠ¤ë¡œ ìžë™ ì™„ì„±í•˜ê¸° 
 			
-		c. ProbonoProjectService.javaÀÇ projectUpdate()
+		c. ProbonoProjectService.javaì˜ projectUpdate()
 	
 	3. RunningStartView.java
-		ºÐ¼®ÇÏ±â	
+		ë¶„ì„í•˜ê¸°	

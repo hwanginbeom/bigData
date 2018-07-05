@@ -1,10 +1,10 @@
-//ìˆœìˆ˜ ì¬ëŠ¥ ê¸°ë¶€ì— ëŒ€í•œ ì •ë³´ ë³´ìœ  í´ë«
+//¼ø¼ö Àç´É ±âºÎ¿¡ ´ëÇÑ Á¤º¸ º¸À¯ Å¬·§
 package probono.model.dto;
 
 public class Probono {
-	private String probonoId;//ì¬ëŠ¥ ê¸°ë¶€ id
-	private String probonoName;//ì¬ëŠ¥ ê¸°ë¶€ ì´ë¦„
-	private String probonoPurpose;//ì¬ëŠ¥ ê¸°ë¶€ ëª©ì 
+	private String probonoId;//Àç´É ±âºÎ id
+	private String probonoName;//Àç´É ±âºÎ ÀÌ¸§
+	private String probonoPurpose;//Àç´É ±âºÎ ¸ñÀû
 	
 	public Probono() {}
 		
@@ -42,11 +42,11 @@ public class Probono {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("[í”„ë¡œë³´ë…¸ ì•„ì´ë”” : ");
+		builder.append("[ÇÁ·Îº¸³ë ¾ÆÀÌµğ : ");
 		builder.append(probonoId);
-		builder.append(", í”„ë¡œë³´ë…¸ ì´ë¦„ : ");
+		builder.append(", ÇÁ·Îº¸³ë ÀÌ¸§ : ");
 		builder.append(probonoName);
-		builder.append(", í”„ë¡œë³´ë…¸ ëª©ì  : ");
+		builder.append(", ÇÁ·Îº¸³ë ¸ñÀû : ");
 		builder.append(probonoPurpose);
 		builder.append("]");
 		return builder.toString();

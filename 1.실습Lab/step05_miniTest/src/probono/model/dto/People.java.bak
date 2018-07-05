@@ -40,11 +40,11 @@ public class People {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("[ì•„ì´ë”” : ");
+		builder.append("[¾ÆÀÌµğ : ");
 		builder.append(id);
-		builder.append(", ì´ë¦„ : ");
+		builder.append(", ÀÌ¸§ : ");
 		builder.append(name);
-		builder.append(", ë¹„ë°€ë²ˆí˜¸ : ");
+		builder.append(", ºñ¹Ğ¹øÈ£ : ");
 		builder.append(password);
 		return builder.toString();
 	}

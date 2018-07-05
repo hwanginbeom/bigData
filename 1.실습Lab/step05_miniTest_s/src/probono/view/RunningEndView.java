@@ -4,16 +4,16 @@ import probono.model.dto.ProbonoProject;
 
 public class RunningEndView {
 	
-	//ф╞а╓ га╥на╖ф╝ цБ╥б 
+	//М┼╧Л═∙ М■└К║°Л═²М┼╦ Л╤°К═╔ 
 	public static void projectView(ProbonoProject project){
 		System.out.println(project);		
 	}
 	
-	//╦П╣Г га╥на╖ф╝ цБ╥б
+	//К╙╗К⌠═ М■└К║°Л═²М┼╦ Л╤°К═╔
 	public static void projectListView(ProbonoProject [] allProbonoProject){
 		for(int index = 0; index < allProbonoProject.length; index++){			
 			if(allProbonoProject[index] != null){
-				System.out.println("[га╥на╖ф╝ " + (index+1) + "]\n" + allProbonoProject[index]);
+				System.out.println("[М■└К║°Л═²М┼╦ " + (index+1) + "]\n" + allProbonoProject[index]);
 			}
 		}
 	}

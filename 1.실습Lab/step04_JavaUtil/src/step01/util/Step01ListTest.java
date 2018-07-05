@@ -1,14 +1,14 @@
-/* ÇĞ½À³»¿ë
- * 1. ÁÖ¿ä API
+/* í•™ìŠµë‚´ìš©
+ * 1. ì£¼ìš” API
  * 		1. java.util 
- * 		2. ArrayList - µ¿Àû ¹è¿­°ú Èí»ç
- * 			- Ã¹ »ı¼º½Ã 10°³ÀÇ ¸Ş¸ğ¸® »ı¼º
- * 			- 11¹øÂ° µ¥ÀÌÅÍ ³ÖÀ¸¸é 10°³°¡ Ãß°¡ »ı¼º
- * 		3. ¸Ş¼Òµå
- * 			1. µ¥ÀÌÅÍ ÀúÀå : add(Object o)
- * 			2. µ¥ÀÌÅÍ »èÁ¦ : remove(int index)
- * 			3. µ¥ÀÌÅÍ ¹İÈ¯ : Object get(int index)
- * 			4. µ¥ÀÌÅÍ °³¼ö : size()
+ * 		2. ArrayList - ë™ì  ë°°ì—´ê³¼ í¡ì‚¬
+ * 			- ì²« ìƒì„±ì‹œ 10ê°œì˜ ë©”ëª¨ë¦¬ ìƒì„±
+ * 			- 11ë²ˆì§¸ ë°ì´í„° ë„£ìœ¼ë©´ 10ê°œê°€ ì¶”ê°€ ìƒì„±
+ * 		3. ë©”ì†Œë“œ
+ * 			1. ë°ì´í„° ì €ì¥ : add(Object o)
+ * 			2. ë°ì´í„° ì‚­ì œ : remove(int index)
+ * 			3. ë°ì´í„° ë°˜í™˜ : Object get(int index)
+ * 			4. ë°ì´í„° ê°œìˆ˜ : size()
  */
 
 package step01.util;
@@ -20,40 +20,40 @@ import model.domain.PeopleDTO;
 public class Step01ListTest {
 
 	public static void main(String[] args) {
-		System.out.println("--- Á¦³×¸¯ ¹Ì ¹İ¿µ ---");
+		System.out.println("--- ì œë„¤ë¦­ ë¯¸ ë°˜ì˜ ---");
 		ArrayList a = new ArrayList();
 		a.add(3);//new Integer(3)
 		a.add("ans");
-		//? index 1¹øÂ°ÀÇ ¹®ÀÚ¿­ °´Ã¼¸¸ÀÌ º¸À¯ÇÑ charAt(1)
+		//? index 1ë²ˆì§¸ì˜ ë¬¸ìì—´ ê°ì²´ë§Œì´ ë³´ìœ í•œ charAt(1)
 		String v = (String)a.get(1);
 		System.out.println(v.charAt(1));
 		
 		System.out.println(((String)a.get(1)).charAt(1));
 		
 		
-		System.out.println("--- Á¦³×¸¯ Àû¿ëÇÑ list : jdk1.5ºÎÅÍ Á¦½Ã ---");
-		//Stringµé¸¸ ÀúÀå °¡´ÉÇÔ µ¿Àû ¸Ş¸ğ¸®ÀÇ ¹è¿­ ÇüÅÂ °´Ã¼ »ı¼º
-		//Å¸ÀÔ Á¦¾à - Á¦³×¸¯
+		System.out.println("--- ì œë„¤ë¦­ ì ìš©í•œ list : jdk1.5ë¶€í„° ì œì‹œ ---");
+		//Stringë“¤ë§Œ ì €ì¥ ê°€ëŠ¥í•¨ ë™ì  ë©”ëª¨ë¦¬ì˜ ë°°ì—´ í˜•íƒœ ê°ì²´ ìƒì„±
+		//íƒ€ì… ì œì•½ - ì œë„¤ë¦­
 		ArrayList<String> list = new ArrayList<String>();
 		
 		System.out.println(list.size());//0
-		//µ¥ÀÌÅÍ ÀúÀå
-		list.add("ÀÌ°æÁØ");//0¹øÂ° ÀÚµ¿ ÀúÀå
+		//ë°ì´í„° ì €ì¥
+		list.add("ì´ê²½ì¤€");//0ë²ˆì§¸ ìë™ ì €ì¥
 		
-		//Á¦³×¸¯ ±¸Á¶´Â Çüº¯È¯ ¾øÀÌ index °ªÀ¸·Î 
-		//½ÇÁ¦ »ı¼ºµÈ Å¸ÀÔÀÇ °´Ã¼·Î ¹İÈ¯
+		//ì œë„¤ë¦­ êµ¬ì¡°ëŠ” í˜•ë³€í™˜ ì—†ì´ index ê°’ìœ¼ë¡œ 
+		//ì‹¤ì œ ìƒì„±ëœ íƒ€ì…ì˜ ê°ì²´ë¡œ ë°˜í™˜
 		System.out.println(list.get(0).charAt(2));
 		
-		list.add("¼­¾Æ¿µ");//1¹øÂ° ÀÚµ¿ ÀúÀå
-		list.add("±èÇı°æ");
-		list.add("±èÇı°æ");
-		//list.add(new Integer(3)); ¹®¹ı ¿À·ù ¿Ö? String ÀúÀå °¡´É
+		list.add("ì„œì•„ì˜");//1ë²ˆì§¸ ìë™ ì €ì¥
+		list.add("ê¹€í˜œê²½");
+		list.add("ê¹€í˜œê²½");
+		//list.add(new Integer(3)); ë¬¸ë²• ì˜¤ë¥˜ ì™œ? String ì €ì¥ ê°€ëŠ¥
 		System.out.println(list.size());//
 		
-		//index·Î 1¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ ¹İÈ¯ ¹× Ãâ·Â
-		System.out.println(list.get(1));//¼­¾Æ¿µ
+		//indexë¡œ 1ì— ì €ì¥ëœ ë°ì´í„° ë°˜í™˜ ë° ì¶œë ¥
+		System.out.println(list.get(1));//ì„œì•„ì˜
 		
-		//µ¥ÀÌÅÍ »èÁ¦
+		//ë°ì´í„° ì‚­ì œ
 		list.remove(1);
 		System.out.println(list.size());//
 		System.out.println(list.get(1));//
@@ -62,10 +62,10 @@ public class Step01ListTest {
 		
 		
 		
-		System.out.println("--- DTO °´Ã¼ È°¿ëÇØ º¸±â ---");
+		System.out.println("--- DTO ê°ì²´ í™œìš©í•´ ë³´ê¸° ---");
 		ArrayList<PeopleDTO> list2 = new ArrayList<PeopleDTO>();	
-		list2.add(new PeopleDTO("¿ìÇö", 20));
-		list2.add(new PeopleDTO("ÇöÁÖ", 10));
+		list2.add(new PeopleDTO("ìš°í˜„", 20));
+		list2.add(new PeopleDTO("í˜„ì£¼", 10));
 		
 		PeopleDTO one = list2.get(0);
 		String name = one.getName();
