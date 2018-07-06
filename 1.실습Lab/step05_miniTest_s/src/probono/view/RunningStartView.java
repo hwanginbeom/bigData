@@ -4,7 +4,7 @@ import probono.model.dto.Activist;
 import probono.model.dto.Probono;
 import probono.model.dto.ProbonoProject;
 import probono.model.dto.Recipient;
-import probono.service.ProbonoProjectService;
+import probono.service.ProbonoProjectServiceArray;
 
 public class RunningStartView {
 	
@@ -22,7 +22,7 @@ public class RunningStartView {
 		= new ProbonoProject("오드리햅버 프로젝트", audreyHepbun, audrey, receive, "헤어미용분야");
 			
 		
-		ProbonoProjectService service = ProbonoProjectService.getInstance();
+		ProbonoProjectServiceArray service = ProbonoProjectServiceArray.getInstance();
 		
 		System.out.println("***** Project 생성 후 모든 Project 검색 *****");
 		service.projectInsert(audreyHepbunPorject);

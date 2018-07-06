@@ -3,6 +3,7 @@ package probono.model.dto;
 public class Activist extends People{
 	private String major;
 	
+	
 	public Activist() {}
 
 	public Activist(String major) {
@@ -12,10 +13,13 @@ public class Activist extends People{
 		super(id, name, password);
 		this.major = major;
 	}
+	public String getMajor() {
+		return major;
+	}
 
-	//?
-	
-	
+	public void setMajor(String major) {
+		this.major = major;
+	}
 
 	@Override
 	public String toString() {

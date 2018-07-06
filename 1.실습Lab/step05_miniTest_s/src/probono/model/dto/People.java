@@ -1,6 +1,6 @@
 package probono.model.dto;
 
-public class People {
+public class People extends Object {
 	private String id;
 	private String name;
 	private String password;

@@ -1,12 +1,17 @@
+//실제 진행되는 재능 기부 프로젝트 정보 보유 클랫
+/*기부자, 수혜자, 기부 종류, 기부되는 실제 내용 
+ * 
+ */
+
 package probono.model.dto;
 
 public class ProbonoProject {
 
-	private String probonoProjectName;
-	private Probono probono;
-	private Activist activist; 
-	private Recipient receive;
-	private String projectContent;
+	private String probonoProjectName; //현 프로젝트 이름 
+	private Probono probono; //기부 종류
+	private Activist activist; //기부자
+	private Recipient receive; // 수혜자 
+	private String projectContent; // 기부되는 실제 내용
 
 	public ProbonoProject() {
 		super();
