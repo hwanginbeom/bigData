@@ -1,3 +1,12 @@
+<<<<<<< HEAD:1.ì‹¤ìŠµLab/step05_miniTest_s/src/probono/model/dto/Probono.java
+//¼ø¼ö Àç´É ±âºÎ¿¡ ´ëÇÑ Á¤º¸ º¸À¯ Å¬·§
+package probono.model.dto;
+
+public class Probono {
+	private String probonoId;//Àç´É ±âºÎ id
+	private String probonoName;//Àç´É ±âºÎ ÀÌ¸§
+	private String probonoPurpose;//
+=======
 // ¼ø¼ö Àç´É ±âºÎ¿¡ ´ëÇÑ Á¤º¸ º¸À¯ Å¬·¡½º
 
 
@@ -8,6 +17,7 @@ public class Probono {
 	private String probonoId; // Àç´É ±âºÎ id
 	private String probonoName; // Àç´É ±âºÎ ÀÌ¸§
 	private String probonoPurpose; // Àç´É ±âºÎ ¸ñÀû
+>>>>>>> 931d84b159238a4281a876c54cdc0a9466de1373:ì´ì˜ë³µ/step05_miniTest_s/src/probono/model/dto/Probono.java
 	
 	public Probono() {}
 		

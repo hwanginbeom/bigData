@@ -1,15 +1,30 @@
+<<<<<<< HEAD:1.ì‹¤ìŠµLab/step05_miniTest_s/src/probono/model/dto/ProbonoProject.java
+//½ÇÁ¦ ÁøÇàµÇ´Â Àç´É ±âºÎ ÇÁ·ÎÁ§Æ® Á¤º¸ º¸À¯ Å¬·§
+/*±âºÎÀÚ, ¼öÇıÀÚ, ±âºÎ Á¾·ù, ±âºÎµÇ´Â ½ÇÁ¦ ³»¿ë 
+ * 
+ */
+
+=======
 // ½ÇÁ¦ ÁøÇàµÇ´Â Àç´É ±âºÎ ÇÁ·ÎÁ§Æ® Á¤º¸ º¸À¯ Å¬·¡½º
 /*
  * ±âºÎÀÚ, ¼öÇıÀÚ, ±âºÎ Á¾·ù, ±âºÎµÇ´Â ½ÇÁ¦ ³»¿ë
  */
+>>>>>>> 931d84b159238a4281a876c54cdc0a9466de1373:ì´ì˜ë³µ/step05_miniTest_s/src/probono/model/dto/ProbonoProject.java
 package probono.model.dto;
 
 public class ProbonoProject {
 
+<<<<<<< HEAD:1.ì‹¤ìŠµLab/step05_miniTest_s/src/probono/model/dto/ProbonoProject.java
+	private String probonoProjectName; //Çö ÇÁ·ÎÁ§Æ® ÀÌ¸§ 
+	private Probono probono; //±âºÎ Á¾·ù
+	private Activist activist; //±âºÎÀÚ
+	private Recipient receive; // ¼öÇıÀÚ 
+=======
 	private String probonoProjectName; // Çö ÇÁ·ÎÁ§Æ® ÀÌ¸§
 	private Probono probono; // ±âºÎ Á¾·á
 	private Activist activist; // ±âºÎÀÚ
 	private Recipient receive; // ¼öÇıÀÚ
+>>>>>>> 931d84b159238a4281a876c54cdc0a9466de1373:ì´ì˜ë³µ/step05_miniTest_s/src/probono/model/dto/ProbonoProject.java
 	private String projectContent; // ±âºÎµÇ´Â ½ÇÁ¦ ³»¿ë
 
 	public ProbonoProject() {
