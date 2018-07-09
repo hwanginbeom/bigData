@@ -10,11 +10,9 @@ public class Data {
 	int job_match;
 	
 	public Data() {
-//		super();
 	}
 	public Data(int year_2006, int year_2010,
-			int year_2014, int job_hunter, int get_percent, int job_offer, int job_match) {
-//		super();
+			int year_2014, int get_percent, int job_hunter, int job_offer, int job_match) {
 		this.year_2006 = year_2006;
 		this.year_2010 = year_2010;
 		this.year_2014 = year_2014;
@@ -68,26 +66,21 @@ public class Data {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Data [year_2006=");
+		builder.append("[●2006년 수입 금액 = ");
 		builder.append(year_2006);
-		builder.append(", year_2010=");
+		builder.append(", ●2010년 수입 금액 = ");
 		builder.append(year_2010);
-		builder.append(", year_2014=");
+		builder.append(", ●2014년 수입 금액 = ");
 		builder.append(year_2014);
-		builder.append(", job_hunter=");
-		builder	.append(job_hunter);
-		builder.append(", get_percent=");
-		builder.append(get_percent);
-		builder.append(", job_offer=");
+		builder.append(", ●취업 증가율(%) = ");
+		builder	.append(get_percent);
+		builder.append(", ●구직자 수= ");
+		builder.append(job_hunter);
+		builder.append(", ●구인기업 = ");
 		builder.append(job_offer);
-		builder.append(", job_match=");
+		builder.append(", ●고용 매칭 수 = ");
 		builder.append(job_match);
 		builder.append("]");
 		return builder.toString();
 	}
-
-	
-	
-	
-	
 }

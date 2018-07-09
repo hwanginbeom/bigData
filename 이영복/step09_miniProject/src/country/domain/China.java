@@ -1,33 +1,31 @@
 package country.domain;
 
 public class China extends Data{
-	String country;
+	String china;
 
-	public China(String country) {
-		this.country = country;
+	public China(String china) {
+		this.china = china;
 	}
 
-	public China(int year_2006, int year_2010, int year_2014, int job_hunter, int get_percent, int job_offer,
-			int job_match, String country) {
+	public China(String china, int year_2006, int year_2010, int year_2014, int job_hunter, int get_percent, int job_offer,
+			int job_match) {
 		super(year_2006, year_2010, year_2014, job_hunter, get_percent, job_offer, job_match);
-		this.country = country;
+		this.china = china;
 	}
 
 	public String getName() {
-		return country;
+		return china;
 	}
 
-	public void setName(String country) {
-		this.country = country;
+	public void setName(String china) {
+		this.china = china;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append(super.toString());
-		builder.append("China [country=");
-		builder.append(country);
-		builder.append("]");
+		builder.append("\n");
 		return builder.toString();
 		}
 }
