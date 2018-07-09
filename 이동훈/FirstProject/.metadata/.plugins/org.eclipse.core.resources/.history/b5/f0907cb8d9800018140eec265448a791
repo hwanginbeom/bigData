@@ -1,0 +1,10 @@
+package bikeseoul.controller;
+
+import bikeseoul.model.BikeModel;
+import bikeseoul.view.EndView;
+
+public class BikeController {
+	public static void all() {
+		EndView.printAll(BikeModel.getAll());
+	}
+}

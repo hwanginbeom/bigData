@@ -1,0 +1,51 @@
+package bikeseoul.model;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import bikeseoul.domain.BikeSeoulDTO;
+
+public class BikeInput {
+	
+	public static void ReadCSV() {
+		BufferedReader in = null;
+		BufferedWriter out = null;
+		ArrayList<BikeSeoulDTO> bikelist = BikeModel.getInstance().list;
+		
+		String Filename = "C:\\Users\\user\\Desktop\\공부자료\\R과파이썬으로활용한데이터분석\\1차프로젝트\\FirstPro\\FirstPro\\BikeSeoulDTO.csv";
+		try {
+
+			in = new BufferedReader(new FileReader(Filename));
+			//out = new BufferedWriter(new FileWriter("newData.txt"));
+			String data = in.readLine();
+			while (data != null) {
+				 System.out.println(data);
+				
+				 //out.write(data);
+				//out.newLine();
+				//System.out.println(data);
+				data = in.readLine();
+				//out.flush(); // 데이터 손실을 위해서 목적지에 데이터 출력 보장
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				in.close();
+				//out.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	public static void main(String[] args) {
+		ReadCSV();
+	
+	}
+}

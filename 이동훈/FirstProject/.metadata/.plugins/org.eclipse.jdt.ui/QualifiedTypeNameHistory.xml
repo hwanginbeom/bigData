@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="bikeseoul.view.EndView"/>
+<fullyQualifiedTypeName name="bikeseoul.controller.BikeController"/>
+<fullyQualifiedTypeName name="bikeseoul.model.BikeInput"/>
+<fullyQualifiedTypeName name="bikeseoul.model.BikeModel"/>
+<fullyQualifiedTypeName name="bikeseoul.domain.BikeSeoulDTO"/>
+<fullyQualifiedTypeName name="bikeseoul.domain.Station"/>
+<fullyQualifiedTypeName name="bikeseoul.domain.Location"/>
+<fullyQualifiedTypeName name="bikeseoul.domain.Rent"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+</qualifiedTypeNameHistroy>

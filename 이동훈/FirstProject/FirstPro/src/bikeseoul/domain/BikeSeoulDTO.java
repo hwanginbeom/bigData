@@ -1,0 +1,56 @@
+package bikeseoul.domain;
+
+public class BikeSeoulDTO {
+	private String id;
+	private Location location;
+	private Rent rent;
+	private Station station;
+	
+	public BikeSeoulDTO() {}
+	
+	public BikeSeoulDTO(String id, Station station, Location location, Rent rent) {
+		super();
+		this.id = id;
+		this.location = location;
+		this.rent = rent;
+		this.station = station;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+	public Rent getRent() {
+		return rent;
+	}
+
+	public void setRent(Rent rent) {
+		this.rent = rent;
+	}
+
+	public Station getStation() {
+		return station;
+	}
+
+	public void setStation(Station station) {
+		this.station = station;
+	}
+
+	@Override
+	public String toString() {
+		return "id=" + id+ ", station=" + station + ", location=" + location + ", rent=" + rent  ;
+	}
+	
+}

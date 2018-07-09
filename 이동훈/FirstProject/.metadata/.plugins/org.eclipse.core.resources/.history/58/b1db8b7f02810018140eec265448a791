@@ -1,0 +1,193 @@
+package bikeseoul.model;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+
+import bikeseoul.domain.BikeSeoulDTO;
+import bikeseoul.domain.Location;
+import bikeseoul.domain.Rent;
+import bikeseoul.domain.Station;
+
+
+public class BikeModel {
+
+	private static BikeModel instance = new BikeModel();
+	
+	static ArrayList<BikeSeoulDTO> list = new ArrayList<BikeSeoulDTO>();
+	
+	/*static Station s = new Station();
+	static Location l = new Location();
+	static Rent r = new Rent();
+	static String i= null;*/
+	static BikeSeoulDTO dto = new BikeSeoulDTO();
+	static ArrayList<BikeSeoulDTO> arr = new ArrayList<BikeSeoulDTO>();
+	
+	private BikeModel() {}
+	
+	public static BikeModel getInstance() {
+		return instance;
+	}
+	public static List<BikeSeoulDTO> getAll() {
+		 return list;
+	 }
+	public static BikeSeoulDTO getId(String id){
+		
+		for(int i=0;i<list.size();i++) {
+			if(list.get(i).getId().equals(id)) {
+				dto = list.get(i);
+				break;
+			}
+		}
+		return dto;
+	}
+	public static ArrayList<BikeSeoulDTO> getName(String name) {
+		for(int i=0;i<list.size();i++) {
+			if(name.matches(list.get(i).getStation().getName())) {
+			//if(list.get(i).getStation().getName().equals(name)) {
+				arr.add(list.get(i));
+				break;
+			}
+		}
+		return arr;
+	}
+	public static ArrayList<BikeSeoulDTO> getHolder(String holder) {
+		for(int i=0;i<list.size();i++) {
+			if(list.get(i).getStation().getHolder().equals(holder)) {
+				arr.add(list.get(i));
+				
+			}
+		}
+		return arr;
+	}
+	public static BikeSeoulDTO getLocation(String id) {
+		for(int i=0;i<list.size();i++) {
+			if(list.get(i).getId().equals(id)) {
+				dto=list.get(i);
+			}
+		}
+		return dto;
+	}
+	public static BikeSeoulDTO getRental(String id) {
+		for(int i=0;i<list.size();i++) {
+			if(list.get(i).getId().equals(id)) {
+				dto=list.get(i);
+				break;
+			}
+		}
+		return dto;
+	}
+	public static void DeleteOne(String id) {
+		boolean check = false;
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i) != null) {
+				if (list.get(i).getId().equals(id)) {
+					list.set(i, null);
+					System.out.println("삭제완료");
+					check = true;
+					break;
+				}
+			}
+		}
+		if (check == false) {
+			System.out.println("삭제실패");
+		}
+	}
+	public static void DeleteOne2(String name) {
+		boolean check = false;
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i) != null) {
+				if (list.get(i).getStation().getName().equals(name)) {
+					list.set(i, null);
+					System.out.println("삭제완료");
+					check = true;
+					break;
+				}
+			}
+		}
+		if (check == false) {
+			System.out.println("삭제실패");
+		}
+	}
+	public static BikeSeoulDTO InsertOne(BikeSeoulDTO One) {
+		try {
+		list.add(One);
+		System.out.println("삽입완료");
+		}catch(InputMismatchException e) {
+			e.printStackTrace();
+		}
+		return One;
+	}
+	public static BikeSeoulDTO UpdateOne(String id,BikeSeoulDTO One) {
+		boolean check = false;
+		for(int i=0;i<list.size();i++) {
+			if(list.get(i).getId().equals(id)) {
+				try {
+				list.set(i, One);
+				System.out.println("수정완료");
+				}catch(InputMismatchException e) {
+					e.printStackTrace();
+				}
+				break;
+			}
+		}
+		if (check == false) {
+			System.out.println("수정실패");
+		}
+		return One;
+	}
+	public static ArrayList<BikeSeoulDTO> getNear(String id) {
+	
+		double lat2=0.0;
+		double lng2=0.0;
+		double dist=0.00;
+		boolean check = false;
+		for(int i=0;i<list.size();i++) {
+			if(list.get(i).getId().equals(id)) {
+				dto = list.get(i);
+			}
+		}
+		double lat = dto.getLocation().getLat();
+		double lng = dto.getLocation().getLng();
+		for(int i=0;i<list.size();i++) {
+			
+			lat2 = list.get(i).getLocation().getLat();
+			lng2 = list.get(i).getLocation().getLng();
+			dist = Math.sqrt(Math.pow((lat2 - lat),2) + Math.pow((lng2 - lng),2));
+			//System.out.println(dist);
+			if(dist<0.015) {
+				arr.add(list.get(i));
+			}
+		}
+		return arr;
+	}
+	public static ArrayList<BikeSeoulDTO> getNear2(String name) {
+		
+		double lat2=0.0;
+		double lng2=0.0;
+		double dist=0.00;
+		boolean check = false;
+		for(int i=0;i<list.size();i++) {
+			if(list.get(i).getId().equals(name)) {
+				dto = list.get(i);
+			}
+		}
+		double lat = dto.getLocation().getLat();
+		double lng = dto.getLocation().getLng();
+		for(int i=0;i<list.size();i++) {
+			
+			lat2 = list.get(i).getLocation().getLat();
+			lng2 = list.get(i).getLocation().getLng();
+			dist = Math.sqrt(Math.pow((lat2 - lat),2) + Math.pow((lng2 - lng),2));
+			//System.out.println(dist);
+			if(dist<0.015) {
+				arr.add(list.get(i));
+			}
+		}
+		return arr;
+	}
+}
+

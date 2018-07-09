@@ -1,0 +1,54 @@
+package bikeseoul.model;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import bikeseoul.domain.BikeSeoulDTO;
+
+public class BikeInput {
+	
+	public static void ReadCSV() {
+		BufferedReader in = null;
+		//BufferedWriter out = null;
+		ArrayList<BikeSeoulDTO> bikelist = BikeModel.getInstance().list;
+		
+		String Filename = "C:\\Users\\user\\Desktop\\공부자료\\R과파이썬으로활용한데이터분석\\1차프로젝트\\FirstPro\\FirstPro\\BikeSeoulDTO.csv";
+		try {
+
+			in = new BufferedReader(new FileReader(Filename));
+			String data = in.readLine();
+			String[] data2 = null;
+			int i = 0;
+			while (data != null) {
+				data2 = data.split(",");
+				bikelist.get(i).setId(data2[0]);
+				bikelist.get(i).getStation().setDistrict(data2[1]);
+				bikelist.get(i).getStation().setName(data2[2]);
+				bikelist.get(i).getStation().setAddress(data2[3]);
+				bikelist.get(i).getStation().setHolder(data2[4]);
+				bikelist.get(i).getLocation().setLat(Double.parseDouble(data2[5]));
+				bikelist.get(i).getLocation().setLng(Double.parseDouble(data2[6]));
+				bikelist.get(i).getRent().setRentalnum(Integer.parseInt(data2[7]));
+				bikelist.get(i).getRent().setReturnnum(Integer.parseInt(data2[8]));
+				i++;
+				data = in.readLine();
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				in.close();
+				//out.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+}

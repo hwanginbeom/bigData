@@ -1,0 +1,5 @@
+package bikeseoul.domain;
+
+public class StationDTO {
+
+}

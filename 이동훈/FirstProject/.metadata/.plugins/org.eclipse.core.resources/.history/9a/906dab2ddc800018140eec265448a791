@@ -1,0 +1,21 @@
+package bikeseoul.view;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import bikeseoul.domain.BikeSeoulDTO;
+import bikeseoul.domain.Station;
+
+public class EndView {
+
+	public static void printAll(List<BikeSeoulDTO> list) {
+		System.out.println("--------------------------결과출력----------------------------------");
+		for(int i=0;i<list.size();i++) {
+			System.out.println(list.get(i));
+		}
+	}
+	public static void printId(BikeSeoulDTO One) {
+		System.out.println("--------------------------결과출력----------------------------------");
+		System.out.println(One.getId()+One.getStation());
+	}
+}

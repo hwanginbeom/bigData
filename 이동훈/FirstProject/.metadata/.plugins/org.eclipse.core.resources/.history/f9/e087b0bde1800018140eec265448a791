@@ -1,0 +1,19 @@
+package bikeseoul.controller;
+
+import bikeseoul.model.BikeModel;
+import bikeseoul.view.EndView;
+
+public class BikeController {
+	public static void all() {
+		EndView.printAll(BikeModel.getAll());
+	}
+	public static void getId(String id) {
+		EndView.printOne(BikeModel.getId(id));
+	}
+	public static void getName(String name) {
+		EndView.printOne(BikeModel.getName(name));
+	}
+	public static void getHolder(String holder) {
+		EndView.printAll(BikeModel.getHolder(holder));
+	}
+}

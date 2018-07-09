@@ -1,0 +1,30 @@
+package bikeseoul.controller;
+
+import bikeseoul.model.BikeModel;
+import bikeseoul.view.EndView;
+
+public class BikeController {
+	public static int instance;
+	public static void all() {
+		EndView.printAll(BikeModel.getAll());
+	}
+	public static void getId(String id) {
+		instance =1;
+		EndView.printOne(BikeModel.getId(id),instance);
+	}
+	public static void getName(String name) {
+		instance =1;
+		EndView.printOne(BikeModel.getName(name),instance);
+	}
+	public static void getLocation(String id) {
+		instance =2;
+		EndView.printOne(BikeModel.getLocation(id),instance);
+	}
+	public static void getHolder(String holder) {
+		EndView.printAll(BikeModel.getHolder(holder));
+	}
+	public static void getRental(String id) {
+		instance =3;
+		EndView.printOne(BikeModel.getRental(id),instance);
+	}
+}

@@ -1,0 +1,97 @@
+package bikeseoul.view;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+import bikeseoul.controller.BikeController;
+import bikeseoul.domain.BikeSeoulDTO;
+import bikeseoul.domain.Location;
+import bikeseoul.domain.Rent;
+import bikeseoul.domain.Station;
+import bikeseoul.model.BikeInput;
+
+public class StartView {
+	public static void main(String[] args) {
+	BikeInput.ReadCSV();
+	 int userChoice;
+     Scanner input = new Scanner(System.in);
+     MenuView View = new MenuView();
+     userChoice = View.menu();
+     while(true) {
+     switch(userChoice) {
+     case 1:
+    	 BikeController.all();
+    	 break;
+     case 2:
+    	 BikeController.getName("학동역");
+    	 break;
+     case 3:
+    	 BikeController.getId("101");
+    	 break;
+     case 4:
+    	 BikeController.getHolder("10");
+    	 break;
+     case 5:
+    	 BikeController.getLocation("10");
+    	 break;
+     case 6:
+    	 BikeController.getRental("101");
+    	 break;
+     case 7:
+    	
+    	 break;
+     case 8:
+    	 BikeController.DeleteOne("111");
+    	 break;
+     case 9:
+    	 BikeController.UpdateOne("2",
+    			 new BikeSeoulDTO("1",new Station("서대문구","추가한데이터","서울시서대문구","10"),
+    					 new Location(30.0,30.0),new Rent(1000,1000)));
+    	 break;
+     case 10:
+    	 BikeController.InsertOne(
+    			 new BikeSeoulDTO("1",new Station("서대문구","추가한데이터","서울시서대문구","10"),
+    					 new Location(30.0,30.0),new Rent(1000,1000)));
+    	 break;
+     case 11:
+    	 System.exit(0);
+    	 break;
+   
+     }
+     
+	System.out.println("******모두 검색******");
+	//BikeController.all();
+	//검색
+	System.out.println("******정류소 이름으로 검색******");
+	//BikeController.getName("학동역");
+	System.out.println("******정류소 번호로 검색******");
+	//BikeController.getId("101");
+	System.out.println("******거치대 개수로 검색******");
+	//BikeController.getHolder("10");
+	System.out.println("******정류소 번호로 정류소 좌표(위도,경도)검색******");
+	//BikeController.getLocation("10");
+	System.out.println("******정류소 번호로 정류소 좌표(위도,경도)검색******");
+	//BikeController.getRental("101");
+	
+	//삽입
+	System.out.println("******정류소 번호로 해당 DTO 삽입******");
+	//BikeController.InsertOne(new BikeSeoulDTO("1",new Station("서대문구","추가한데이터","서울시서대문구","10"),new Location(30.0,30.0),new Rent(1000,1000)));
+	
+	//수정
+	System.out.println("*******정류소 번호로 해당 DTO 수정*******");
+	//BikeController.UpdateOne("2",new BikeSeoulDTO("1",new Station("서대문구","추가한데이터","서울시서대문구","10"),new Location(30.0,30.0),new Rent(1000,1000)));
+	
+	//삭제
+	System.out.println("********정류소 번호로 해당 정류소 정보 삭제********");
+	//BikeController.DeleteOne("111");
+	System.out.println("********정류소 번호로 해당 정류소 정보 삭제********");
+	
+	
+	
+	
+	}
+	
+}
+
