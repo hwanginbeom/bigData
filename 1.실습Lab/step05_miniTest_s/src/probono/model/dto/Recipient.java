@@ -15,10 +15,14 @@ public class Recipient extends People {
 		this.receiveContent = receiveContent;
 	}
 
-	//?
-	
-	
-	
+	public String getReceiveContent() {
+		return receiveContent;
+	}
+
+	public void setReceiveContent(String receiveContent) {
+		this.receiveContent = receiveContent;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
