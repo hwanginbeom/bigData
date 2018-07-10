@@ -1,0 +1,80 @@
+* 다형성 필요성을 이해하기 위한 부연 설명들
+class A{}
+class B extends A{}
+class C extneds B{}
+
+class D{}  
+
+- 재사용성 극대화 한 메소드를 만들어라
+	- 타입이 객체이기만 하면 모두다 처리 가능한 기능
+	
+void m(Object v){
+	....///
+}
+
+void m(A v){   m(new A());m(new B());m(new C());
+	....///
+}
+
+Object o = new Object(); o
+= new A();	o
+= new B();	o
+= new C();	o
+= new D();	o
+
+A a = new Object();	x
+= new A();	o
+= new B();	o
+= new C();	o
+= new D();	x
+
+B b = new Object();	x
+= new A();	x
+= new B();	o
+= new C();	o
+= new D();	x
+
+C b = new Object(); x
+= new A();x
+= new B();x
+= new C();o
+= new D();x
+
+D b = new Object();x
+= new A();x
+= new B();x
+= new C();x
+= new D();o
+
+
+
+
+* 상단 코드가 컴파일 직후 자동 생성된 
+class A extnds Object{
+	A(){
+		super();
+	}
+}
+class B extends A{
+	B(){
+		super();
+	}
+}
+class C extneds B{
+	C(){
+		super();
+	}
+}
+
+class D extends Object{
+	D(){
+		super();
+	}
+}
+
+
+
+
+
+
+
