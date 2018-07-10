@@ -1,0 +1,26 @@
+출제자 : 여운중 , 응시자 : 이동훈
+
+
+문제1
+COMM이 NULL이 아닌 사원의 급여정보를 
+내림차순으로 정렬하고 부서번호를 오름차순으로 정렬하라
+select sal,deptno from emp where comm is not null order by sal desc, deptno asc;
+
+문제2
+COMM이 NULL이 아닌 사원의 연봉(SAL*12+COMM)을 
+계산하고 오름차순으로 정렬하라, (연봉으로 새로운 컬럼을 만들어라)
+
+select sal*12+comm as 연봉 from emp where comm is not null order by 연봉 asc;
+문제3
+이름에 A가 포함되어있는 사원들의 연봉(SAL*12+COMM)을 계산하라
+select sal,deptno from emp where comm is not null order by sal desc, deptno asc;
+
+문제4
+comm을 0으로 대체하고 이름에 B가 포함되어 있는 
+사람들의 월 평균 연봉{(SAL*12+COMM)/12}을 계산하라 (월 평균 연봉으로 새로운 컬럼을 만들어라)
+
+select (sal*12+nvl(comm,0))/12 as 연봉 from emp where ename like '%B%';
+
+문제5
+사원이름을 오름차순으로 정렬하고, 직업을 내림차순을 정렬하라
+select * from emp order by ename asc,job desc;
