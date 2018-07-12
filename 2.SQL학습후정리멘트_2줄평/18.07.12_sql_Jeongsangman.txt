@@ -1,0 +1,2 @@
+select <query> + insert/update/delete <dml> + create/drop/alter <ddl> = SQL
+SQL 에서 DB 의 CRUD 를 통한 보다 전문적이고 체계적인 DB 관리법을 배우고, 응용하는 과정을 다루어 본다.
