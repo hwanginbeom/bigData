@@ -1,0 +1,29 @@
+<학습 후 정리>
+
+-project 만들 때
+Dynamic web project로 실행 
+
+-url mapping 할 때
+/ 중요
+
+-구성 ??? 이 문구의 필요성????
+html -> servlet -> succ or fail 
+
+-cookie 
+저장할 문자열 데이터 만큼 생성 
+ex. id와 password 면 두개 생성 해야함 
+	Cookie c1= new Cookie("data1",id); 
+	Cookie c2= new Cookie("data2",request.getParameter("pw"));
+			
+
+-session
+	HttpSession session = request.getSession(); //httpSession 타입의  session을 새로 만든 것 
+	//세션에 이름 저장 
+	session.setAttribute("name", "코난"); //setAttribute로 저장! 
+			
+	request.setAttribute("newData", "요청에 새로운 데이터 저장");
+	request.getRequestDispatcher("succ2").forward(request, response);
+	
+
+
+??? 그 이상의 학습 내용은 어디로?
