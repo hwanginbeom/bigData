@@ -4,7 +4,7 @@
 	1) Oracle 자바 개발 환경
 2. 개발 tool
 	1) Eclipse : ibm
-3. rdms
+3. rdms    ??? rdbms 아녀???
 	1) Oracle vender 사의 oracle 유
 	2) SQL Developer
 4. 브라우저
