@@ -1,4 +1,4 @@
-ㅁ 용어를 외웁시다.
+﻿ㅁ 용어를 외웁시다.
 1. WAS [Web Application Server]
 		- www 즉 인터넷 상에서 브라우저와 요청
 		응답기능의 서버
@@ -23,6 +23,15 @@
 		세션
 		쿠키
 
+ㅁ 쿠키 생성
+Cookie c1 = new Cookie("data1", id);
+ㅁ 쿠키 라이프타임 생성
+c1.setMaxAge(60 * 60 * 24 * 365);
+ㅁ 쿠키 저장
+response.addCookie(c1);
+ㅁ 쿠키 정보 받음
+Cookie[] all = request.getCookies();
+
 		
 ㅁ 포워드 방식에서 객체 생성 -> 쿠키 정보를 획득하지만 foward 할 때 리스폰스 하지 않고 다시 foward 물려주기 때문에 해당 객체를 그대로 들고있음(쿠키는 인식하지 못함).
 따라서 쿠키 정보를 get 하고 싶지만 쿠키 정보는 인식할 수 없다. 
@@ -30,3 +39,15 @@
 ㅁ 리다이렉트 방식에서는 객체를 생성하고 쿠키 정보를 획득. 리스폰스 완료. 새로운 객체를 생성하고 request를 하게 되면 쿠키 정보를 get 할 수 있음.
  
 ㅁ 즉 새로운 객체를 생성하고 request를 하는 경우에 이전에 생성된 쿠키 정보를 get할 수 있다.  쿠키는 foward의 경우에서는 의미 없는 정보로 파악될 수 있다.
+
+
+
+
+ㅁ 세션 객체 생성
+HttpSession session = request.getSession();
+ㅁ 세션 저장
+session.setAttribute("name", "코난");
+ㅁ 세션 객체 받아옴
+HttpSession session = request.getSession();
+ㅁ 세션 무효화
+session.invalidate();session = null;
