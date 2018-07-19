@@ -6,7 +6,7 @@ Dynamic web project로 실행
 -url mapping 할 때
 / 중요
 
--구성 
+-구성 ??? 이 문구의 필요성????
 html -> servlet -> succ or fail 
 
 -cookie 
@@ -26,3 +26,4 @@ ex. id와 password 면 두개 생성 해야함
 	
 
 
+??? 그 이상의 학습 내용은 어디로?
