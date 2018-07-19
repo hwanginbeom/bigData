@@ -1,0 +1,20 @@
+어떤 학습을 했는가?
+
+WAS(Web Application Server) - www상에서 브라우저와 요청, 응답기능 하는 서버
+servlet : java기반 웹 개발 스펙(http 통신 가능 자바 스펙)
+tomcat : 아파치의 무료 was, servlet 및 jsp 실행 엔진. web container.
+jsp : 최초 client가 해당 jsp 요청시 tomcat이 servlet으로 자동 변환, 컴파일, bytecode 메모리에 로딩
+
+웹 페이지 이동 기술
+html tag : <a>, form의 submit, 일반 button의 onclick
+servlet api : forward(데이터 손실 무, 요청, 응답 객체의 유지 및 공유), redirect (새로운 요청 및 request, respond의 새로운 생성)
+
+client 상태 유지를 위한 개발 기술 : 세션, 쿠키
+-원래 http는 client 정보를 기본적으로 저장, 관리 x. 무상태 연결
+쿠키 : client pc에 상태 유지값을 저장, 문자열 저장
+세션 : 서버에 상태유지 값 저장. 객체 타입 저장 가능, page 이동 방식과 무관하게 서버 메모리의 데이터를 저장 및 활용 가능
+
+request.setAttribute(key, value)
+ - forward 방식으로 page 이동
+ session.setAttribute()
+ - forward, redirect 다 된다. redirect의 경우 invalidate로 끊어주기 때문에 가능.
