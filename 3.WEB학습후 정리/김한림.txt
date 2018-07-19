@@ -1,28 +1,28 @@
-*** Å« Æ²À» ±×¸®ÀÚ ***
+*** í° í‹€ì„ ê·¸ë¦¬ì ***
 1. get/post vs forward/redirect 
- - get/post´Â µ¥ÀÌÅÍ Àü¼Û ¹æ½Ä (submitÀÌ ¾øÀ¸¸é ÀÌµ¿½ÃÅ³ ¹æ½ÄÀÌ ¾øÀ½)
- - forward/redirect À¥ÆäÀÌÁö ÀÌµ¿ ¹æ½Ä 
-   (º¸¾ÈÀ» °í·ÁÇÒ ¶§/ºí·Î±× ÀÌµ¿)
+ - get/postëŠ” ë°ì´í„° ì „ì†¡ ë°©ì‹ (submitì´ ì—†ìœ¼ë©´ ì´ë™ì‹œí‚¬ ë°©ì‹ì´ ì—†ìŒ)
+ - forward/redirect ì›¹í˜ì´ì§€ ì´ë™ ë°©ì‹ 
+   (ë³´ì•ˆì„ ê³ ë ¤í•  ë•Œ/ë¸”ë¡œê·¸ ì´ë™)
 
-2. »óÅÂÀ¯Áö¸¦ À§ÇÑ µ¥ÀÌÅÍ ÀúÀå ¹æ½Ä
+2. ìƒíƒœìœ ì§€ë¥¼ ìœ„í•œ ë°ì´í„° ì €ì¥ ë°©ì‹
  - Cookie
-   - client ½Ã½ºÅÛ¿¡ ¹®ÀÚ¿­·Î¸¸ ÀúÀå 
-   --> getName() / getValue()·Î ÄíÅ° Á¤º¸ È°¿ë °¡´É
+   - client ì‹œìŠ¤í…œì— ë¬¸ìì—´ë¡œë§Œ ì €ì¥ 
+   --> getName() / getValue()ë¡œ ì¿ í‚¤ ì •ë³´ í™œìš© ê°€ëŠ¥
 			
  - HttpSession
-   - server ½Ã½ºÅÛ ¸Ş¸ğ¸®¿¡ ÀúÀå
-   - page ÀÌµ¿ ¹æ½Ä°ú ¹«°üÇÏ°Ô ¼­¹ö ¸Ş¸ğ¸®¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀå ¹× È°¿ë °¡´É
-   - setAttribute(), getAttribute(), invalidate(), null °ªÀ¸·Î Á¤¸®		
+   - server ì‹œìŠ¤í…œ ë©”ëª¨ë¦¬ì— ì €ì¥
+   - page ì´ë™ ë°©ì‹ê³¼ ë¬´ê´€í•˜ê²Œ ì„œë²„ ë©”ëª¨ë¦¬ì— ë°ì´í„°ë¥¼ ì €ì¥ ë° í™œìš© ê°€ëŠ¥
+   - setAttribute(), getAttribute(), invalidate(), null ê°’ìœ¼ë¡œ ì •ë¦¬		
 
 
-*** ²À ¾Ï±âÇÏÀÚ ***
+*** ê¼­ ì•”ê¸°í•˜ì ***
 1. javax.servlet.http.HttpServlet
   - public void doGet()
   - public void doPost()
   - public void service()
 		
 2. javax.servlet.http.HttpServletRequest
- - Á¢¼ÓµÈ client¸¸ÀÇ ¿äÃ» Á¤º¸ º¸À¯ÇÑ °´Ã¼
+ - ì ‘ì†ëœ clientë§Œì˜ ìš”ì²­ ì •ë³´ ë³´ìœ í•œ ê°ì²´
   1. getParameter()	
   2. getRequestDispatcher()
   3. public void setAttribute(String key, Object Value)
@@ -33,12 +33,13 @@
   3. sendRedirect()
 
 
-*** ÃÖÁ¾ Á¤¸® ***
+*** ìµœì¢… ì •ë¦¬ ***
 1. request.setAttribute(key, value)
-  - ÀÌ ¿äÃ» °´Ã¼¿¡ ÀúÀåÇÑ µ¥ÀÌÅÍ¸¦ È°¿ëÇÒ ¼ö ÀÖ´Â page ÀÌµ¿ ¹æ½Ä?
-  - ´ä : forward
+  - ì´ ìš”ì²­ ê°ì²´ì— ì €ì¥í•œ ë°ì´í„°ë¥¼ í™œìš©í•  ìˆ˜ ìˆëŠ” page ì´ë™ ë°©ì‹?
+  - ë‹µ : forward
 			
 2. session.setAttribute()	
-  - ÀÌ ¼¼¼Ç °´Ã¼¿¡ ÀúÀåÇÑ µ¥ÀÌÅÍ¸¦ È°¿ëÇÒ ¼ö ÀÖ´Â page ÀÌµ¿ ¹æ½Ä?
-  - ´ä : forward, redirect	
+  - ì´ ì„¸ì…˜ ê°ì²´ì— ì €ì¥í•œ ë°ì´í„°ë¥¼ í™œìš©í•  ìˆ˜ ìˆëŠ” page ì´ë™ ë°©ì‹?
+  - ë‹µ : forward, redirect	
 
+*** web page ì´ë™ ë°©ì‹? ***
