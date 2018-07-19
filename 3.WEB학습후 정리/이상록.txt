@@ -1,0 +1,15 @@
+web
+브라우저에 원하는 기능을 만들고 띄워주기 위해서 필요한 과정
+자바기반의 servlet을 만들어 tomcat을 통해 www에 실행
+http와 css는 구조와 디자인을 바꿀수 있음
+servlet
+서버에 url로 요청하는 default값인 get방식은 따로 호출되지 않아도 출력이 되기때문에 소량의 데이터와 오픈된 데이터에 사용되고 필요에 의해 호출이 될때 출력되는 post방식은 대량의 데이터와 개인정보와 같은 데이터를 받을때 사용하는 방식이다.
+request와 response를 통하여 객체에 들어갈 데이터를 받아준다
+페이지를 이동하는 방식으로 forward방식과 redirect방식이 있는데 forward는 데이터 손실없이 하나의 servlet으로 간주하여 객체가 계속 이어져서 넘어가고 redirect방식은 새로운 요청으로 간주하여 request와 response가 새로 생성된다.
+request 사용
+String getParameter(), getRequestDispatcher(),
+public void setAttribute(String key, Object value), public Object getAttribute(String key)
+response 사용
+setContentType(), getWriter(), sendRedirect()
+
+client가 pc내에서만 저장하여 확인하는것은 쿠키값이고 server에 저장하는 것은 session이다
