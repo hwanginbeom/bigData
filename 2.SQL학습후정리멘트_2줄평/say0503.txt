@@ -1,0 +1,8 @@
+SQL에는 DQL, DML이 있다. DQL - SELECT FROM WHERE , DML - UPDATE, INSERT, DELETE 
+to_date()날짜로변경함수 to_number()숫자로변환 decode()-조건식함수
+기본문법 조건문 WHERE , 그룹함수 조건문 having .. count(), sum(), avg(), max(),min()
+
+동등조인 : 같은 조건이 존재할 경우 값 검색
+not - equi조인 : 100% 일치 X 특정 범위내에서 데이터 조인시에 사용 (between~ and)
+self 조인 : 동일 테이블 내에서 상이한 칼럼 참조 (emp의 empno와 mgr 관계)
+outer 조인 : null때문에 검색되지 않은 행 함께 검색하기 위한 조인
